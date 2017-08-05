@@ -1,0 +1,20 @@
+{
+  "name": "book-store",
+  "version": "0.0.0",
+  "description": "Application for the Google Books API",
+  "main": "index.js",
+  "repository": "git@github.com:steinerm/book-store.git",
+  "author": "Mate Steiner <mate.steiner@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-thunk": "^2.2.0",
+    "reselect": "^3.0.1",
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1"
+  }
+}
