@@ -10,8 +10,10 @@
     },
     "globals": {
         "Promise": false,
-        "process": false
+        "process": false,
+        "API_KEY": false
     },
+    "parser": "babel-eslint",
     "parserOptions": {
         "ecmaVersion": 6,
         "ecmaFeatures": {

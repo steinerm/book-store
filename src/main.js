@@ -1,14 +1,15 @@
 'use strict';
 
+import 'bootstrap.css';
 import StoreApp from 'StoreApp';
-import {createElement} from 'react';
+import {createElement, createFactory} from 'react';
 import {render} from 'react-dom';
-// import configureStore from 'store/configureStore';
+import configureStore from 'store/configureStore';
 import {Provider} from 'react-redux';
+import {BrowserRouter as BrowserRouterClass} from 'react-router-dom';
 
 const rootElement = document.getElementById('root');
-// const store = configureStore();
-const StoreAppElement = createElement(StoreApp);
+const store = configureStore();
+const BrowserRouter = createFactory(BrowserRouterClass);
 
-// render(createElement(Provider, {store}, StoreAppElement), rootElement);
-render(StoreAppElement, rootElement);
+render(BrowserRouter(null, createElement(Provider, {store}, StoreApp)), rootElement);

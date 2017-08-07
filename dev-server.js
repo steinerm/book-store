@@ -37,18 +37,8 @@ var bundler = new WebpackDevServer(compiler, {
     noInfo: false,
     stats: {
         colors: true
-    }
-    // ,
-    // proxy: {
-    //     '/jersey/*': {
-    //         target: 'http://localhost:8080',
-    //         secure: false
-    //     },
-    //     '*': {
-    //         target: 'http://localhost:8080',
-    //         secure: false
-    //     }
-    // }
+    },
+    historyApiFallback: true
 });
 
 // We fire up the development server and give notice in the terminal
