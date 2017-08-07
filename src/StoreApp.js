@@ -30,11 +30,11 @@ class StoreApp extends Component {
     }
 
     renderSwitch() {
-        return Switch(null, this.renderHome(),
-            this.renderDetailedSearchItem(), this.renderDetailedCartItem(), this.renderList(), this.renderCart(), this.renderNotfound());
+        return Switch(null, this.getHome(), this.getDetailedSearchItem(), this.getDetailedCartItem(),
+            this.getList(), this.getCart(), this.getNotfound());
     }
 
-    renderHome() {
+    getHome() {
         return Route({
             exact: true,
             path: '/',
@@ -42,35 +42,35 @@ class StoreApp extends Component {
         });
     }
 
-    renderList() {
+    getList() {
         return Route({
             path: '/list',
             component: SearchClass
         });
     }
 
-    renderCart() {
+    getCart() {
         return Route({
             path: '/cart',
             component: CartClass
         });
     }
 
-    renderDetailedSearchItem() {
+    getDetailedSearchItem() {
         return Route({
             path: '/list/:id',
             component: DetailedSearchItem
         });
     }
 
-    renderDetailedCartItem() {
+    getDetailedCartItem() {
         return Route({
             path: '/cart/:id',
             component: DetailedCartItemClass
         });
     }
 
-    renderNotfound() {
+    getNotfound() {
         return Route({
             component: NotFoundClass
         });
