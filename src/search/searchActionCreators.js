@@ -9,7 +9,7 @@ export const clear = () => {
     };
 };
 
-export const search = (query, {getVolumes} = APIResource) => {
+export const search = (query, getVolumes = APIResource.getVolumes) => {
     const {parseItems, parseCount, getStartIndex} = searchSelectors;
     return (dispatch, getState) => {
         dispatch({

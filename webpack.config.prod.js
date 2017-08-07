@@ -51,7 +51,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Book Store',
-            template: 'dev-template.html'
+            template: 'dev-template.html' //prod template can be used with hotjar
         }),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production'),
