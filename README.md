@@ -30,6 +30,6 @@ The application is available at http://localhost:8080.
 
 `yarn test`
 
-##4). Launch the build process
+##5). Launch the build process
 
 `yarn build`
