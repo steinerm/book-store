@@ -2,17 +2,16 @@ var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var lib = path.resolve(__dirname, 'node_modules');
-var buildDir = path.resolve(__dirname, 'build/server');
+var buildDir = path.resolve(__dirname, 'build');
 module.exports = {
     entry: [
         'whatwg-fetch',
         'babel-polyfill',
-        'webpack-dev-server/client?http://localhost:8080',
         './src/main.js'
     ],
     output: {
         path: buildDir,
-        filename: 'dev_bundle.js',
+        filename: 'index.js',
         publicPath: ''
     },
     module: {
@@ -42,7 +41,7 @@ module.exports = {
     },
     resolve: {
         alias: {
-            'bootstrap.css': path.resolve(lib, 'bootstrap/dist/css/bootstrap.css')
+            'bootstrap.css': path.resolve(lib, 'bootstrap/dist/css/bootstrap.min.css')
         },
         modules: [
             path.resolve(__dirname, 'src'),
@@ -55,15 +54,13 @@ module.exports = {
             template: 'dev-template.html'
         }),
         new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify('development'),
+            'process.env.NODE_ENV': JSON.stringify('production'),
             'API_KEY': JSON.stringify('AIzaSyCsr3E5xGrp2EkeYTfuO4m9T0BHgPZTxc0')
         }),
-        new webpack.LoaderOptionsPlugin({
-            debug: true
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
         })
-    ],
-    devServer: {
-        contentBase: buildDir
-    },
-    devtool: 'source-map'
+    ]
 };

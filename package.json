@@ -36,6 +36,7 @@
   },
   "scripts": {
     "start": "node dev-server.js",
-    "eslint": "eslint ./src"
+    "eslint": "eslint ./src",
+    "build": "yarn eslint && webpack --config webpack.config.prod"
   }
 }

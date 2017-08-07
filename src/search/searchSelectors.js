@@ -1,7 +1,7 @@
 'use strict';
 
 import {createSelector} from 'reselect';
-import noImageIcon from 'assets/no-image.png';
+import noImageIcon from 'resources/no-image.png';
 
 const progressSelector = state => state.search.progress;
 const selectedIdSelector = state => state.search.selectedId;

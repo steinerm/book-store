@@ -22,7 +22,7 @@ const handleResponse = response => {
     }
 };
 
-export const getVolumes = (query, startIndex = 0) => window.fetch(`${VOLUMES_URL}?q=intitle:${encodeURI(query)}&` +
+export const getVolumes = (query, startIndex = 0) => fetch(`${VOLUMES_URL}?q=intitle:${encodeURI(query)}&` +
     `startIndex=${encodeURI(startIndex)}&maxResults=40&key=${API_KEY}`, {
     method: 'get'
 }).then(handleResponse);
