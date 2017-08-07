@@ -1,20 +1,20 @@
 # I). Setup develop environment
 
-##1). Install node
+## 1). Install node
 
 `https://nodejs.org/en/download/`
 
-##2). Install yarn
+## 2). Install yarn
 
 `https://yarnpkg.com/en/docs/install`
 
-#II). Set up a local instance of the application
+# II). Set up a local instance of the application
 
-##1). Clone the git repository
+## 1). Clone the git repository
 
 `git clone git@github.com:steinerm/book-store.git`
 
-##2). Launch the local development server  
+## 2). Launch the local development server  
 
 `yarn`
 
@@ -22,14 +22,14 @@
 
 The application is available at http://localhost:8080.
 
-##3). Launch static tests
+## 3). Launch static tests
 
 `yarn eslint`
 
-##4). Launch unit tests
+## 4). Launch unit tests
 
 `yarn test`
 
-##5). Launch the build process
+## 5). Launch the build process
 
 `yarn build`
